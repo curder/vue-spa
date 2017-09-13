@@ -9,8 +9,8 @@
 
 ```
 npm install
-php artisan key:generate
 cp .env.example .env
+php artisan key:generate
 ```
 
 ## Configuration
