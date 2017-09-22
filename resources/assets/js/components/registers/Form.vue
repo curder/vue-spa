@@ -6,6 +6,7 @@
             <div class="col-md-6">
                 <input v-model="name"
                        v-validate="{ rules: { required: true, min: 4 } }"
+                       data-vv-as="用户名"
                        id="name" type="text" class="form-control" name="name" required>
                 <span class="help-block" v-show="errors.has('name')">{{ errors.first('name') }}</span>
             </div>
@@ -17,6 +18,7 @@
             <div class="col-md-6">
                 <input v-model="email"
                        v-validate="{ rules: { required: true, email: true } }"
+                       data-vv-as="邮箱"
                        id="email" type="email" class="form-control" name="email" required>
                 <span class="help-block" v-show="errors.has('email')">{{ errors.first('email') }}</span>
 
@@ -30,6 +32,7 @@
             <div class="col-md-6">
                 <input v-model="password"
                        v-validate="{ rules: { required: true, min: 6 } }"
+                       data-vv-as="密码"
                        id="password" type="password" class="form-control" name="password" required>
                 <span class="help-block" v-show="errors.has('password')">{{ errors.first('password') }}</span>
             </div>
@@ -41,6 +44,7 @@
             <div class="col-md-6">
                 <input id="password-confirm"
                        v-validate="{ rules: { required: true, min: 6,confirmed: 'password' } }"
+                       data-vv-as="确认密码"
                        type="password" class="form-control" name="password_confirmation" required>
                 <span class="help-block"
                       v-show="errors.has('password_confirmation')">{{ errors.first('password_confirmation') }}</span>

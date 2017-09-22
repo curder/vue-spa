@@ -5,10 +5,16 @@ window.Vue = require('vue');
 import VueRouter from "vue-router";
 import router from "./routers";
 import App from "./components/App";
-import VeeValidate from "vee-validate";
+
+import zh_CN from "vee-validate/dist/locale/zh_CN";
+import VeeValidate, {Validator} from "vee-validate";
+
+Validator.addLocale(zh_CN);
 
 Vue.use(VueRouter);
-Vue.use(VeeValidate);
+Vue.use(VeeValidate, {
+    locale: 'zh_CN'
+});
 Vue.component('App', App);
 
 const app = new Vue({
