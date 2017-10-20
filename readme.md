@@ -16,7 +16,7 @@ npm install
 ```
 
 ## Configuration
-修改一些必要的配置信息
+
 * database
 ```
 DB_CONNECTION=mysql
@@ -33,4 +33,13 @@ APP_LOG_LEVEL=debug
 APP_URL=http://localhost
 APP_NAME=Laravel
 APP_ENV=local
+```
+* passport token
+Run `php artisan passport:install` Get the CLIENT_ID && SECRET
+```
+PERSONAL_CLIENT_ID=1
+PERSONAL_CLIENT_SECRET=
+
+PASSPORT_CLIENT_ID=2
+PASSPORT_CLIENT_SECRET=
 ```
