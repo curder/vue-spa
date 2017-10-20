@@ -3382,7 +3382,7 @@ if (inBrowser && window.Vue) {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(11);
-module.exports = __webpack_require__(68);
+module.exports = __webpack_require__(74);
 
 
 /***/ }),
@@ -3393,11 +3393,11 @@ module.exports = __webpack_require__(68);
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_router__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__routers__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_App__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_App__ = __webpack_require__(66);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_App___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__components_App__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_vee_validate_dist_locale_zh_CN__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_vee_validate_dist_locale_zh_CN__ = __webpack_require__(72);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_vee_validate_dist_locale_zh_CN___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_vee_validate_dist_locale_zh_CN__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_vee_validate__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_vee_validate__ = __webpack_require__(73);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_vee_validate___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_vee_validate__);
 __webpack_require__(12);
 
@@ -44393,9 +44393,13 @@ var routes = [{
     name: 'register',
     component: __webpack_require__(51)
 }, {
+    path: '/login',
+    name: 'login',
+    component: __webpack_require__(57)
+}, {
     path: '/confirm',
     name: 'confirm',
-    component: __webpack_require__(57)
+    component: __webpack_require__(63)
 }];
 
 /* harmony default export */ __webpack_exports__["a"] = (new __WEBPACK_IMPORTED_MODULE_0_vue_router__["a" /* default */]({
@@ -44420,7 +44424,7 @@ var Component = __webpack_require__(1)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/Users/luo/WebRoot/ValetSite/vue-spa/resources/assets/js/components/pages/Home.vue"
+Component.options.__file = "/Users/luo/Sites/Laravel/vue-spa/resources/assets/js/components/pages/Home.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Home.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -44481,7 +44485,7 @@ var Component = __webpack_require__(1)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/Users/luo/WebRoot/ValetSite/vue-spa/resources/assets/js/components/posts/Index.vue"
+Component.options.__file = "/Users/luo/Sites/Laravel/vue-spa/resources/assets/js/components/posts/Index.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Index.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -44619,7 +44623,7 @@ var Component = __webpack_require__(1)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/Users/luo/WebRoot/ValetSite/vue-spa/resources/assets/js/components/pages/About.vue"
+Component.options.__file = "/Users/luo/Sites/Laravel/vue-spa/resources/assets/js/components/pages/About.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] About.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -44717,7 +44721,7 @@ var Component = __webpack_require__(1)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/Users/luo/WebRoot/ValetSite/vue-spa/resources/assets/js/components/posts/Show.vue"
+Component.options.__file = "/Users/luo/Sites/Laravel/vue-spa/resources/assets/js/components/posts/Show.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Show.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -44819,7 +44823,7 @@ var Component = __webpack_require__(1)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/Users/luo/WebRoot/ValetSite/vue-spa/resources/assets/js/components/registers/Register.vue"
+Component.options.__file = "/Users/luo/Sites/Laravel/vue-spa/resources/assets/js/components/registers/Register.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Register.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -44889,7 +44893,7 @@ var Component = __webpack_require__(1)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/Users/luo/WebRoot/ValetSite/vue-spa/resources/assets/js/components/registers/Form.vue"
+Component.options.__file = "/Users/luo/Sites/Laravel/vue-spa/resources/assets/js/components/registers/Form.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Form.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -45280,7 +45284,7 @@ var Component = __webpack_require__(1)(
   /* script */
   __webpack_require__(58),
   /* template */
-  __webpack_require__(59),
+  __webpack_require__(62),
   /* styles */
   null,
   /* scopeId */
@@ -45288,7 +45292,358 @@ var Component = __webpack_require__(1)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/Users/luo/WebRoot/ValetSite/vue-spa/resources/assets/js/components/confirm/Email.vue"
+Component.options.__file = "/Users/luo/Sites/Laravel/vue-spa/resources/assets/js/components/login/Login.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] Login.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-75a54e64", Component.options)
+  } else {
+    hotAPI.reload("data-v-75a54e64", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 58 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__LoginForm__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__LoginForm___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__LoginForm__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    components: {
+        LoginForm: __WEBPACK_IMPORTED_MODULE_0__LoginForm___default.a
+    }
+});
+
+/***/ }),
+/* 59 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var Component = __webpack_require__(1)(
+  /* script */
+  __webpack_require__(60),
+  /* template */
+  __webpack_require__(61),
+  /* styles */
+  null,
+  /* scopeId */
+  null,
+  /* moduleIdentifier (server only) */
+  null
+)
+Component.options.__file = "/Users/luo/Sites/Laravel/vue-spa/resources/assets/js/components/login/LoginForm.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] LoginForm.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-df5c869c", Component.options)
+  } else {
+    hotAPI.reload("data-v-df5c869c", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 60 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__helpers_jwt_js__ = __webpack_require__(84);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            email: '',
+            password: ''
+        };
+    },
+
+    methods: {
+        login: function login() {
+            var formData = {
+                username: this.email,
+                password: this.password
+            };
+            axios.post('/api/login', formData).then(function (response) {
+                console.log(response.data);
+                __WEBPACK_IMPORTED_MODULE_0__helpers_jwt_js__["a" /* default */].setToken(response.data.access_token);
+                //                    this.$router.push({name: 'confirm'});
+            }).catch(function (error) {
+                console.log(error.response.data);
+            });
+        }
+    }
+});
+
+/***/ }),
+/* 61 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('form', {
+    staticClass: "form-horizontal",
+    attrs: {
+      "method": "POST"
+    },
+    on: {
+      "submit": function($event) {
+        $event.preventDefault();
+        _vm.login($event)
+      }
+    }
+  }, [_c('div', {
+    staticClass: "form-group",
+    class: {
+      'has-error': _vm.errors.has('email')
+    }
+  }, [_c('label', {
+    staticClass: "col-md-4 control-label",
+    attrs: {
+      "for": "email"
+    }
+  }, [_vm._v("邮箱")]), _vm._v(" "), _c('div', {
+    staticClass: "col-md-6"
+  }, [_c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.email),
+      expression: "email"
+    }, {
+      name: "validate",
+      rawName: "v-validate",
+      value: ({
+        rules: {
+          required: true,
+          email: true
+        }
+      }),
+      expression: "{ rules: { required: true, email: true } }"
+    }],
+    staticClass: "form-control",
+    attrs: {
+      "data-vv-as": "邮箱",
+      "id": "email",
+      "type": "email",
+      "name": "email",
+      "required": ""
+    },
+    domProps: {
+      "value": (_vm.email)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.email = $event.target.value
+      }
+    }
+  }), _vm._v(" "), _c('span', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.errors.has('email')),
+      expression: "errors.has('email')"
+    }],
+    staticClass: "help-block"
+  }, [_vm._v(_vm._s(_vm.errors.first('email')))])])]), _vm._v(" "), _c('div', {
+    staticClass: "form-group",
+    class: {
+      'has-error': _vm.errors.has('password')
+    }
+  }, [_c('label', {
+    staticClass: "col-md-4 control-label",
+    attrs: {
+      "for": "password"
+    }
+  }, [_vm._v("密码")]), _vm._v(" "), _c('div', {
+    staticClass: "col-md-6"
+  }, [_c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.password),
+      expression: "password"
+    }, {
+      name: "validate",
+      rawName: "v-validate",
+      value: ({
+        rules: {
+          required: true,
+          min: 6
+        }
+      }),
+      expression: "{ rules: { required: true, min: 6 } }"
+    }],
+    staticClass: "form-control",
+    attrs: {
+      "data-vv-as": "密码",
+      "id": "password",
+      "type": "password",
+      "name": "password",
+      "required": ""
+    },
+    domProps: {
+      "value": (_vm.password)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.password = $event.target.value
+      }
+    }
+  }), _vm._v(" "), _c('span', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.errors.has('password')),
+      expression: "errors.has('password')"
+    }],
+    staticClass: "help-block"
+  }, [_vm._v(_vm._s(_vm.errors.first('password')))])])]), _vm._v(" "), _vm._m(0)])
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "form-group"
+  }, [_c('div', {
+    staticClass: "col-md-6 col-md-offset-4"
+  }, [_c('button', {
+    staticClass: "btn btn-primary",
+    attrs: {
+      "type": "submit"
+    }
+  }, [_vm._v("登录")])])])
+}]}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-df5c869c", module.exports)
+  }
+}
+
+/***/ }),
+/* 62 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "container"
+  }, [_c('div', {
+    staticClass: "row"
+  }, [_c('div', {
+    staticClass: "col-md-8 col-md-offset-2"
+  }, [_c('div', {
+    staticClass: "panel panel-default"
+  }, [_c('div', {
+    staticClass: "panel-heading"
+  }, [_vm._v("登录")]), _vm._v(" "), _c('div', {
+    staticClass: "panel-body"
+  }, [_c('login-form')], 1)])])])])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-75a54e64", module.exports)
+  }
+}
+
+/***/ }),
+/* 63 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var Component = __webpack_require__(1)(
+  /* script */
+  __webpack_require__(64),
+  /* template */
+  __webpack_require__(65),
+  /* styles */
+  null,
+  /* scopeId */
+  null,
+  /* moduleIdentifier (server only) */
+  null
+)
+Component.options.__file = "/Users/luo/Sites/Laravel/vue-spa/resources/assets/js/components/confirm/Email.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Email.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -45312,7 +45667,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 58 */
+/* 64 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -45341,7 +45696,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 59 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -45370,15 +45725,15 @@ if (false) {
 }
 
 /***/ }),
-/* 60 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var Component = __webpack_require__(1)(
   /* script */
-  __webpack_require__(61),
+  __webpack_require__(67),
   /* template */
-  __webpack_require__(65),
+  __webpack_require__(71),
   /* styles */
   null,
   /* scopeId */
@@ -45386,7 +45741,7 @@ var Component = __webpack_require__(1)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/Users/luo/WebRoot/ValetSite/vue-spa/resources/assets/js/components/App.vue"
+Component.options.__file = "/Users/luo/Sites/Laravel/vue-spa/resources/assets/js/components/App.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] App.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -45410,12 +45765,12 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 61 */
+/* 67 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_commons_TopMenu__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_commons_TopMenu__ = __webpack_require__(68);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_commons_TopMenu___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_commons_TopMenu__);
 //
 //
@@ -45434,15 +45789,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 62 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var Component = __webpack_require__(1)(
   /* script */
-  __webpack_require__(63),
+  __webpack_require__(69),
   /* template */
-  __webpack_require__(64),
+  __webpack_require__(70),
   /* styles */
   null,
   /* scopeId */
@@ -45450,7 +45805,7 @@ var Component = __webpack_require__(1)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/Users/luo/WebRoot/ValetSite/vue-spa/resources/assets/js/components/commons/TopMenu.vue"
+Component.options.__file = "/Users/luo/Sites/Laravel/vue-spa/resources/assets/js/components/commons/TopMenu.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] TopMenu.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -45474,11 +45829,12 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 63 */
+/* 69 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
 //
 //
 //
@@ -45509,7 +45865,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
-/* 64 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -45532,6 +45888,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_vm._m(1), _vm._v(" "), _c('ul', {
     staticClass: "nav navbar-nav navbar-right"
   }, [_c('router-link', {
+    attrs: {
+      "tag": "li",
+      "to": "/login"
+    }
+  }, [_c('a', [_vm._v("登录")])]), _vm._v(" "), _c('router-link', {
     attrs: {
       "tag": "li",
       "to": "/register"
@@ -45573,7 +45934,7 @@ if (false) {
 }
 
 /***/ }),
-/* 65 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -45593,14 +45954,14 @@ if (false) {
 }
 
 /***/ }),
-/* 66 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {!function(n,e){ true?module.exports=e():"function"==typeof define&&define.amd?define(e):(n.__vee_validate_locale__zh_CN=n.__vee_validate_locale__zh_CN||{},n.__vee_validate_locale__zh_CN.js=e())}(this,function(){"use strict";var n=function(n){var e=["Byte","KB","MB","GB","TB","PB","EB","ZB","YB"],t=0===(n=1024*Number(n))?0:Math.floor(Math.log(n)/Math.log(1024));return 1*(n/Math.pow(1024,t)).toFixed(2)+" "+e[t]},e=function(n,e){var t=e;return n.split(".").every(function(n){return!!Object.prototype.hasOwnProperty.call(t,n)&&(t=t[n],!0)})},t={name:"zh_CN",messages:{after:function(n,e){return" "+n+"必须在"+e[0]+"之后"},alpha_dash:function(n){return" "+n+"能够包含字母数字字符，包括破折号、下划线"},alpha_num:function(n){return n+" 只能包含字母数字字符."},alpha_spaces:function(n){return" "+n+" 只能包含字母字符，包括空格."},alpha:function(n){return" "+n+" 只能包含字母字符."},before:function(n,e){return" "+n+" 必须在"+e[0]+" 之前."},between:function(n,e){return" "+n+" 必须在"+e[0]+" "+e[1]+"之间."},confirmed:function(n,e){return" "+n+" 不能和"+e[0]+"匹配."},date_between:function(n,e){return" "+n+"必须在"+e[0]+"和"+e[1]+"之间."},date_format:function(n,e){return" "+n+"必须在在"+e[0]+"格式中."},decimal:function(n,e){void 0===e&&(e=["*"]);var t=e[0];return" "+n+" 必须是数字的而且能够包含"+("*"===t?"":t)+" 小数点."},digits:function(n,e){return" "+n+" 必须是数字，且精确到 "+e[0]+"数"},dimensions:function(n,e){return" "+n+"必须是 "+e[0]+" 像素到 "+e[1]+" 像素."},email:function(n){return" "+n+" 必须是有效的邮箱."},ext:function(n){return" "+n+" 必须是有效的文件."},image:function(n){return" "+n+" 必须是图片."},in:function(n){return" "+n+" 必须是一个有效值."},ip:function(n){return" "+n+" 必须是一个有效的地址."},max:function(n,e){return" "+n+" 不能大于"+e[0]+"字符."},mimes:function(n){return" "+n+" 必须是有效的文件类型."},min:function(n,e){return" "+n+" 必须至少有 "+e[0]+" 字符."},not_in:function(n){return" "+n+"必须是一个有效值."},numeric:function(n){return" "+n+" 只能包含数字字符."},regex:function(n){return" "+n+" 格式无效."},required:function(n){return n+" 是必须的."},size:function(e,t){var r=t[0];return" "+e+" 必须小于 "+n(r)+"."},url:function(n){return" "+n+"不是有效的url."}},attributes:{}};return function(n){var t=null;return"undefined"!=typeof window&&(t=window),"undefined"!=typeof global&&(t=global),!(!t||!e(n,t))}("VeeValidate.Validator")&&VeeValidate.Validator.addLocale(t),t});
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
-/* 67 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {/**
@@ -49533,10 +49894,36 @@ return index;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
-/* 68 */
+/* 74 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 75 */,
+/* 76 */,
+/* 77 */,
+/* 78 */,
+/* 79 */,
+/* 80 */,
+/* 81 */,
+/* 82 */,
+/* 83 */,
+/* 84 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = ({
+    setToken: function setToken(token) {
+        window.localStorage.setItem('jwt_token', token);
+    },
+    getToken: function getToken() {
+        return window.localStorage.getItem('jwt_token');
+    },
+    removeToken: function removeToken() {
+        return window.localStorage.removeItem('jwt_token');
+    }
+});
 
 /***/ })
 /******/ ]);

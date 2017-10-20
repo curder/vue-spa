@@ -18,6 +18,7 @@
                     <li><a href="/">Home</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
+                    <router-link tag="li" to="/login"><a>登录</a></router-link>
                     <router-link tag="li" to="/register"><a>注册</a></router-link>
                 </ul>
             </div><!-- /.navbar-collapse -->
