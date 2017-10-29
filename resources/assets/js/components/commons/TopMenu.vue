@@ -18,13 +18,22 @@
                     <li><a href="/">Home</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <router-link tag="li" to="/login"><a>登录</a></router-link>
-                    <router-link tag="li" to="/register"><a>注册</a></router-link>
+                    <router-link v-if="!user.authenticated" tag="li" to="/login"><a>登录</a></router-link>
+                    <router-link v-if="!user.authenticated" tag="li" to="/register"><a>注册</a></router-link>
+                    <router-link v-if="user.authenticated" tag="li" to="/profile"><a>个人中心</a></router-link>
+                    <li v-if="user.authenticated"><a href="#">退出登录</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div>
     </nav>
 </template>
 <script>
-    export default {}
+    import {mapState} from 'vuex';
+    export default {
+        computed: {
+            ...mapState({
+                user: state => state.AuthUser
+            })
+        }
+    }
 </script>
