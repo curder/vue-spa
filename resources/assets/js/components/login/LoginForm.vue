@@ -43,14 +43,18 @@
         },
         methods: {
             login() {
+                this.$validator.validateAll().then(result => {
                 let formData = {
                     username: this.email,
                     password: this.password
                 };
-                this.$store.dispatch('loginRequest', formData).then(response => {});
-                this.$router.push({name: 'profile'});
+                this.$store.dispatch('loginRequest', formData).then(response => {
+                    this.$router.push({name: 'profile'});
+            });
 
+            });
             }
-        }
+
+    }
     }
 </script>

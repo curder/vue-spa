@@ -15,7 +15,7 @@
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
                 <ul class="nav navbar-nav">
-                    <li><a href="/">Home</a></li>
+                    <router-link tag="li" to="/"><a>Home</a></router-link>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <router-link v-if="!user.authenticated" tag="li" to="/login"><a>登录</a></router-link>

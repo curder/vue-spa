@@ -499,6 +499,23 @@ module.exports = g;
 
 /***/ }),
 /* 3 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = ({
+    setToken: function setToken(token) {
+        window.localStorage.setItem('jwt_token', token);
+    },
+    getToken: function getToken() {
+        return window.localStorage.getItem('jwt_token');
+    },
+    removeToken: function removeToken() {
+        return window.localStorage.removeItem('jwt_token');
+    }
+});
+
+/***/ }),
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -596,23 +613,6 @@ utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
 module.exports = defaults;
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(25)))
-
-/***/ }),
-/* 4 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony default export */ __webpack_exports__["a"] = ({
-    setToken: function setToken(token) {
-        window.localStorage.setItem('jwt_token', token);
-    },
-    getToken: function getToken() {
-        return window.localStorage.getItem('jwt_token');
-    },
-    removeToken: function removeToken() {
-        return window.localStorage.removeItem('jwt_token');
-    }
-});
 
 /***/ }),
 /* 5 */
@@ -14479,7 +14479,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__store_index__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_App__ = __webpack_require__(75);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_App___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__components_App__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__helpers_jwt__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__helpers_jwt__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_vee_validate_dist_locale_zh_CN__ = __webpack_require__(81);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_vee_validate_dist_locale_zh_CN___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_vee_validate_dist_locale_zh_CN__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_vee_validate__ = __webpack_require__(82);
@@ -44325,7 +44325,7 @@ module.exports = __webpack_require__(22);
 var utils = __webpack_require__(0);
 var bind = __webpack_require__(5);
 var Axios = __webpack_require__(24);
-var defaults = __webpack_require__(3);
+var defaults = __webpack_require__(4);
 
 /**
  * Create an instance of Axios
@@ -44408,7 +44408,7 @@ function isSlowBuffer (obj) {
 "use strict";
 
 
-var defaults = __webpack_require__(3);
+var defaults = __webpack_require__(4);
 var utils = __webpack_require__(0);
 var InterceptorManager = __webpack_require__(34);
 var dispatchRequest = __webpack_require__(35);
@@ -45130,7 +45130,7 @@ module.exports = InterceptorManager;
 var utils = __webpack_require__(0);
 var transformData = __webpack_require__(36);
 var isCancel = __webpack_require__(8);
-var defaults = __webpack_require__(3);
+var defaults = __webpack_require__(4);
 
 /**
  * Throws a `Cancel` if cancellation has been requested.
@@ -45380,7 +45380,7 @@ module.exports = function spread(callback) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_router__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__store_index__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__helpers_jwt__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__helpers_jwt__ = __webpack_require__(3);
 
 
 
@@ -45497,7 +45497,7 @@ var SET_AUTH_USER = 'SET_AUTH_USER';
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__helpers_jwt__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__helpers_jwt__ = __webpack_require__(3);
 
 
 /* harmony default export */ __webpack_exports__["a"] = ({
@@ -46545,12 +46545,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
     methods: {
         login: function login() {
-            var formData = {
-                username: this.email,
-                password: this.password
-            };
-            this.$store.dispatch('loginRequest', formData).then(function (response) {});
-            this.$router.push({ name: 'profile' });
+            var _this = this;
+
+            this.$validator.validateAll().then(function (result) {
+                var formData = {
+                    username: _this.email,
+                    password: _this.password
+                };
+                _this.$store.dispatch('loginRequest', formData).then(function (response) {
+                    _this.$router.push({ name: 'profile' });
+                });
+            });
         }
     }
 });
@@ -46970,6 +46975,7 @@ module.exports = Component.exports
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_commons_TopMenu__ = __webpack_require__(77);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_commons_TopMenu___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_commons_TopMenu__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__helpers_jwt__ = __webpack_require__(3);
 //
 //
 //
@@ -46978,9 +46984,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
+    created: function created() {
+        if (__WEBPACK_IMPORTED_MODULE_1__helpers_jwt__["a" /* default */].getToken()) {
+            this.$store.dispatch('setAuthUser');
+        }
+    },
+
     components: {
         TopMenu: __WEBPACK_IMPORTED_MODULE_0__components_commons_TopMenu___default.a
     }
@@ -47095,7 +47108,14 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "id": "bs-example-navbar-collapse-6"
     }
-  }, [_vm._m(1), _vm._v(" "), _c('ul', {
+  }, [_c('ul', {
+    staticClass: "nav navbar-nav"
+  }, [_c('router-link', {
+    attrs: {
+      "tag": "li",
+      "to": "/"
+    }
+  }, [_c('a', [_vm._v("Home")])])], 1), _vm._v(" "), _c('ul', {
     staticClass: "nav navbar-nav navbar-right"
   }, [(!_vm.user.authenticated) ? _c('router-link', {
     attrs: {
@@ -47135,14 +47155,6 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }), _vm._v(" "), _c('span', {
     staticClass: "icon-bar"
   })])
-},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('ul', {
-    staticClass: "nav navbar-nav"
-  }, [_c('li', [_c('a', {
-    attrs: {
-      "href": "/"
-    }
-  }, [_vm._v("Home")])])])
 }]}
 module.exports.render._withStripped = true
 if (false) {
